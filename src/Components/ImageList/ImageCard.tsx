@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { useTheme } from "../../Contexts/ThemeContext";
+import EditIcon from "@mui/icons-material/Edit";
+import DeleteIcon from "@mui/icons-material/Delete";
+import { Cancel, Check } from "@mui/icons-material";
 
 interface ImageItem {
   id: string;
@@ -83,7 +86,7 @@ const ImageCard: React.FC<ImageCardProps> = ({
               disabled={isEditing}
               title="Edit image name"
             >
-              ✏️
+              <EditIcon />
             </EditButton>
             <DeleteButton
               theme={theme}
@@ -91,7 +94,7 @@ const ImageCard: React.FC<ImageCardProps> = ({
               disabled={isDeleting}
               title="Delete image"
             >
-              {isDeleting ? "⏳" : "🗑️"}
+              {isDeleting ? "⏳" : <DeleteIcon />}
             </DeleteButton>
           </ButtonGroup>
         </ImageOverlay>
@@ -116,10 +119,10 @@ const ImageCard: React.FC<ImageCardProps> = ({
             />
             <EditButtons>
               <SaveButton theme={theme} onClick={handleEditSave}>
-                ✓
+                <Check />
               </SaveButton>
               <CancelButton theme={theme} onClick={handleEditCancel}>
-                ✕
+                <Cancel />
               </CancelButton>
             </EditButtons>
           </EditForm>

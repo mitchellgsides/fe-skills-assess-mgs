@@ -9,5 +9,5 @@ What I didn't Finish or Would work on More:
 1. A bit more responsive for small screens (less than 530px).
 2. Scroll handling including scrolling the list of images instead of the whole page, and load more for large numbers of images, or an infinite scroll.
 3. Perhaps caching for the images and some better validation.
-4. Theming improvements and consistency.
+4. Theming improvements for consistency, including using more Material UI and implementing MUI theming.
 5. Implement an Error Boundary to handle

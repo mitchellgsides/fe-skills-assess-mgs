@@ -61,13 +61,11 @@ const ImageList: React.FC = () => {
         <Title theme={theme}>
           {searchTerm
             ? `Search Results (${filteredImages.length})`
-            : `All Images (${filteredImages.length})`}
+            : `${filteredImages.length} Images`}
         </Title>
-        {searchTerm && (
-          <SearchIndicator theme={theme}>
-            Showing results for: "{searchTerm}"
-          </SearchIndicator>
-        )}
+        <SearchIndicator theme={theme}>
+          {searchTerm ? `Showing results for: "${searchTerm}"` : "\u00A0"}
+        </SearchIndicator>
       </Header>
 
       <ImageGrid>
@@ -95,7 +93,10 @@ const Container = styled.div<{ theme: any }>`
 `;
 
 const Header = styled.div`
-  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
 `;
 
 const Title = styled.h2<{ theme: any }>`

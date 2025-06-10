@@ -35,16 +35,12 @@ const SearchBar: React.FC = () => {
       <SearchForm onSubmit={handleSearch}>
         <SearchInput
           type="text"
-          placeholder="Search images by name..."
+          placeholder="Search images..."
           value={localSearchTerm}
           onChange={handleInputChange}
           theme={theme}
         />
         <ButtonGroup>
-          <Button
-            label="Search"
-            onClick={() => searchImages(localSearchTerm)}
-          />
           <ClearButtonContainer>
             {searchTerm ? (
               <Button label="Clear" onClick={handleClear} variant="secondary" />

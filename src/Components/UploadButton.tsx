@@ -155,7 +155,7 @@ export const UploadButton: React.FC = () => {
       />
 
       <Button
-        label={isUploading ? "Uploading..." : "Upload"}
+        label={isUploading ? "Uploading..." : "UPLOAD"}
         onClick={handleButtonClick}
         disabled={isUploading}
       />

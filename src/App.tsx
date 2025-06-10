@@ -59,7 +59,7 @@ const AppContainer = styled.div<{ theme: any }>`
 const Header = styled.header<{ theme: any }>`
   background: ${(props) => props.theme.backgroundGradient};
   color: ${(props) => props.theme.white};
-  padding: 2rem;
+  padding: 1rem;
   box-shadow: 0 2px 4px ${(props) => props.theme.shadow};
 `;
 
@@ -99,9 +99,10 @@ const Controls = styled.div<{ theme: any }>`
   justify-content: space-between;
   align-items: center;
   max-width: 1200px;
+  height: 60px;
   margin: 0 auto;
-  gap: 2rem;
-  padding: 1.5rem;
+  gap: 1rem;
+  padding: 1rem;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -116,5 +117,5 @@ const ControlItem = styled.div`
 `;
 
 const Main = styled.main`
-  padding: 2rem 1rem;
+  padding: 1rem 1rem;
 `;
